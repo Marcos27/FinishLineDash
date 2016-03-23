@@ -1,0 +1,350 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title>Finish Line Dash</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="js.javascript"></script>
+<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body>
+
+
+<!--this is where the square are in the Game-->
+
+<div class="maingame">
+
+<div class="sq1"><div class="test"></div></div>
+<div class="sq2"></div>
+<div class="sq3"></div>
+<div class="sq4"></div>
+<div class="sq5"></div>
+<div class="sq6"></div>
+<div class="sq7"></div>
+<div class="sq8"></div>
+<div class="sq9"></div>
+<div class="sq10"></div>
+<div class="sq11"></div>
+<div class="sq12"></div>
+<div class="sq13"></div>
+<div class="sq14"></div>
+<div class="sq15"></div>
+<div class="sq16"></div>
+<div class="sq17"></div>
+<div class="sq18"></div>
+<div class="sq19"></div>
+<div class="sq20"></div>
+<div class="sq21"></div>
+<div class="sq22"></div>
+<div class="sq23"></div>
+<div class="sq24"></div>
+<div class="sq25"></div>
+<div class="sq26"></div>
+<div class="sq27"></div>
+
+</div>
+<!---END of code-->
+
+
+
+
+<!--This is the Main spinner to the Game-->
+<div class="outside-spinnper">
+  <div class="spinner">
+    <div id="cellBtn1" class="cell1">1</div>
+    <div id="cellBtn2" class="cell2">2</div>
+    <div id="cellBtn3" class="cell3">3</div>
+    <div id="cellBtn4" class="cell4">4</div>
+    <div id="cellBtn5" class="cell5">5</div>
+    <div id="cellBtn6" class="cell6">6</div>
+    <div id="cellBtn7" class="cell7">7</div>
+    <div id="cellBtn8" class="cell8">8</div>
+    <div id="cellBtn9" class="cell9">9</div>
+    <div id="cellBtn10" class="cell10">10</div>
+  </div>
+<div class="randow-spin-btn">
+<button id="Ran-Btn1" class="Ran-Btn" onclick="spinnerBtn()">Random Spin</button>
+</div>
+</div>
+<!---END of code-->
+
+
+
+
+<!---The Second Srceen where the Player are
+going to pick there Icon-->
+<div class="iconPickerMain">
+  <div class="iconHolder">
+    <div class="IconBox">
+      <div class="fristIcon">
+        <div class="iconNameHolder">Pink Dolphin
+        </div>
+      </div>
+    </div>
+    <div class="IconBox">
+      <div class="secondIcon">
+        <div class="iconNameHolder">Mr.Meme
+        </div>
+      </div>
+    </div>
+    <div class="IconBox">
+      <div class="Icon3">
+        <div class="iconNameHolder">Shia Labeouf
+        </div>
+      </div>
+    </div>
+    <div class="IconBox">
+      <div class="Icon4">
+        <div class="iconNameHolder">Spongebob
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=""></div>
+  <div class=""></div>
+  <div class="zoomIcon1">
+  </div>
+  <div class="zoomIcon2">
+  </div>
+  <div class="zoomIcon3">
+  </div>
+  <div class="zoomIcon4">
+  </div>
+</div>
+<!---END of code-->
+
+
+
+
+
+
+
+<!---The Start of the Game Srceen-->
+<div class="letsPlayMain">
+  <div class="titleOfGame">Finish Line Dash</div>
+  <div class="letsPlay">Lets play!
+    <div class="startBtn">PLAY NOW!</div>
+  </div>
+  <div class="myNameBox">A Marcos Felix Production</div>
+</div>
+<!---END of code-->
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+
+
+
+//this will place the Icon into the frist Box
+var playerBlock = $("<div class='player1'></div>")
+var playerPosition = 1;
+$(".sq"+playerPosition).append(playerBlock);
+//<------------END of code------------------->
+
+
+//This function will randomly pick a number
+//from 1-10
+function spinnerBtn() {
+var spinner = Math.random();
+var moveTooSpace;
+  if(spinner <= 0.10 ){
+    moveTooSpace = 1
+    $('.cell1').addClass('chBtn')
+    console.log('spot 1');
+    $('.player1').addClass('move1')
+    moveGreen()
+      playerMoving()
+    questions()
+  }else if(spinner <= 0.20 ){
+    moveTooSpace = 2
+    $('.cell2').addClass('chBtn')
+    console.log('spot 2');
+        $('.player1').addClass('move2')
+        moveGreen()
+  playerMoving()
+    questions()
+  }else if(spinner <= 0.30 ){
+    moveTooSpace = 3
+   $('.cell3').addClass('chBtn')
+    console.log('spot 3');
+    moveGreen()
+      playerMoving()
+    questions()
+  }else if(spinner <= 0.40 ){
+    moveTooSpace = 4
+    $('.cell4').addClass('chBtn')
+    console.log('spot 4');
+    moveGreen()
+    playerMoving()
+    questions()
+  }else if(spinner <= 0.50 ){
+    moveTooSpace = 5
+    $('.cell5').addClass('chBtn')
+    console.log('spot 5');
+    moveGreen()
+     playerMoving()
+    questions()
+  }else if(spinner <= 0.60 ){
+     moveTooSpace = 6
+    $('.cell6').addClass('chBtn')
+    console.log('spot 6');
+    moveGreen()
+     playerMoving()
+    questions()
+  }else if(spinner <= 0.70 ){
+     moveTooSpace = 7
+    $('.cell7').addClass('chBtn')
+    console.log('spot 7');
+    moveGreen()
+ playerMoving()
+    questions()
+  }else if(spinner <= 0.80 ){
+    moveTooSpace = 8
+    $('.cell8').addClass('chBtn')
+    console.log('spot 8');
+    moveGreen()
+     playerMoving()
+    questions()
+  }else if(spinner <= 0.90 ){
+    moveTooSpace = 9
+    $('.cell9').addClass('chBtn')
+    console.log('spot 9');
+    moveGreen()
+     playerMoving()
+    questions()
+  }else{
+    moveTooSpace = 10
+    $('.cell10').addClass('chBtn')
+    console.log('spot 10');
+    moveGreen()
+     playerMoving()
+    questions()
+  }
+  console.log(spinner);
+function playerMoving() {
+var roll = moveTooSpace;
+playerPosition = playerPosition + roll;
+$(".sq"+playerPosition).append(playerBlock)
+}
+//<------------END of code------------------->
+
+
+
+//this function will move the icon to "x" spaces
+//the spinner lands on
+function moveGreen() {
+if (moveTooSpace === 1){
+  var goingToo = '+=121px';
+  var secMove = 1000;
+}else if(moveTooSpace === 2) {
+  var goingToo = '+=242px';
+  var secMove = 2000;
+}else if(moveTooSpace === 3) {
+  var goingToo = '+=363px';
+  var secMove = 3000;
+}else if(moveTooSpace === 4) {
+  var goingToo = '+=483px';
+  var secMove = 3000;
+}else if(moveTooSpace === 5) {
+  var goingToo = '+=605px';
+  var secMove = 3000;
+}else if(moveTooSpace === 6) {
+  var goingToo = '+=725px';
+  var secMove = 3000;
+}else if(moveTooSpace === 7) {
+  var goingToo = '+=847px';
+  var secMove = 4000;
+}else if(moveTooSpace === 8) {
+  var goingToo = '+=976px';
+  var secMove = 4000;
+}else if(moveTooSpace === 9) {
+  var goingToo = '+=1097px';
+  var secMove = 4000;
+}else if(moveTooSpace === 10) {
+  var goingToo = '+=1219px';
+  var secMove = 4000;
+}
+  $('.test').animate({marginLeft: goingToo}, secMove)
+    setTimeout(function(){
+  prompt('question?') ;
+  setTimeout(function(){
+  $('.chBtn').removeClass('chBtn')
+}, 1000)
+}, secMove);
+}
+}
+//<------------END of code------------------->
+
+
+//This is the start of the Game srceen it
+//will say Lets play and slide the option too
+//to play on the screen
+$('.letsPlay').slideUp(0)
+$('.letsPlay').slideDown(4000)
+  $('.startBtn').slideUp(2000)
+  $('.startBtn').fadeIn(4000)
+
+//
+$('.startBtn').click(function() {
+  $('.letsPlayMain').fadeOut(3000)
+    $('.iconHolder').slideUp(0)
+  $('.iconHolder').slideDown(4000)
+  });
+//<------------END of code------------------->
+
+//This will Zoom the Icon picture, when the play click the
+//icon they want.
+$('.zoomIcon1').hide(0)
+$('.zoomIcon2').hide(0)
+$('.zoomIcon3').hide(0)
+$('.zoomIcon4').hide(0)
+
+$('.fristIcon').click(function() {
+  $('.fristIcon').addClass('clickIcon')
+  $('.zoomIcon1').toggle(1000)
+    $('.zoomIcon1').toggle(2000)
+  $('.clickIcon').click(function(){
+ $('.fristIcon').removeClass('clickIcon')
+  })
+});
+
+$('.secondIcon').click(function() {
+  $('.secondIcon').addClass('clickIcon')
+  $('.zoomIcon2').toggle(1000)
+    $('.zoomIcon2').toggle(2000)
+  $('.clickIcon').click(function(){
+ $('.secondIcon').removeClass('clickIcon')
+  })
+});
+
+$('.Icon3').click(function() {
+  $('.Icon3').addClass('clickIcon')
+  $('.zoomIcon3').toggle(1000)
+    $('.zoomIcon3').toggle(3000)
+  $('.clickIcon').click(function(){
+ $('.Icon3').removeClass('clickIcon')
+  })
+});
+
+$('.Icon4').click(function() {
+  $('.Icon4').addClass('clickIcon')
+  $('.zoomIcon4').toggle(1000)
+    $('.zoomIcon4').fadeOut(3000)
+  $('.clickIcon').click(function(){
+ $('.Icon4').removeClass('clickIcon')
+  })
+});
+//<------------END of code------------------->
+
+
+
+
+</script>
+</body>
+</html>
