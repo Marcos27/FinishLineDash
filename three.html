@@ -23,6 +23,22 @@
 </div>
 </div>
 
+
+
+
+<!--frist box of a question-->
+<div class="question1">who was the first person on the moon?
+<button class="answer1">A.Neil Armstrong</button>
+<button class="answer2">B.Marcos Felix</button>
+<button class="answer3">C.Jack Jonhson</button>
+
+
+</div>
+<!--END OF CODE-->
+
+
+
+
 <style>
   .spinner{
 
@@ -91,42 +107,110 @@ font-size: 15px;
 
 }
 
+
+
+.question1 {
+    position: absolute;
+    width: 382px;
+    height: 159px;
+    border: 1px solid black;
+    top: 509px;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 24px;
+    left: 624px;
+}
+
+.answer1 {
+    font-size: 18px;
+    display: inline-block;
+    margin: 7px;
+    width: 156px;
+    height: 58px;
+    border: 1px solid blue;
+}
+
+.answer2 {
+    font-size: 18px;
+    display: inline-block;
+    margin: 7px;
+    width: 156px;
+    height: 58px;
+    border: 1px solid blue;
+}
+
+.answer3 {
+    font-size: 18px;
+    display: inline-block;
+    margin: 7px;
+    width: 156px;
+    height: 58px;
+    border: 1px solid blue;
+}
+
+
 </style>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.js"></script>
     <script>
+
+$('.question1').hide(0)
+
+
+
+
+
+
+
+
 var secMove;
 var moveTooSpace;
 var UPDATES_PER_SECOND = 60
 var DISTANCE_BET_BOX = 75
+var isAnswerRight;
+
+
 
 function spinnerBtn() {
+
+ questionPOP()
+console.log("is my questionPOP running")
+
+
+
+if(isAnswerRight){
+  console.log("i need this too run")
 var spinner = Math.random();
 
   if(spinner <= 0.53 ){
     moveTooSpace = 1
-    secMove = 1200;
+    secMove = 1250;
     $('.cell1').addClass('chBtn');
     console.log('spot 1');
     take()
   }else if(spinner <= 0.86 ){
     moveTooSpace = 2
-    secMove = 3200;
+    secMove = 2500;
     $('.cell2').addClass('chBtn')
     console.log('spot 2');
      take()
   }else{
     moveTooSpace = 3
-    secMove = 5200;
+    secMove = 5000;
     $('.cell3').addClass('chBtn')
     console.log('spot 3');
   take()
   }
+
+
+}
   console.log(spinner);
   setTimeout(function(){
-  prompt('question?') ;
+
   setTimeout(function(){
+    console.log("was this click right")
   $('.chBtn').removeClass('chBtn')
 }, 1000)
 }, secMove);
@@ -134,15 +218,71 @@ var spinner = Math.random();
 
 //<------------END of code------------------->
 
+
+function questionPOP(){
+
+$('.question1').slideDown(2000)
+
+$('.answer1').click(function() {
+  $('.question1').slideUp(2000)
+isAnswerRight = true
+});
+
+$('.answer2').click(function() {
+  $('.question1').slideUp(2000)
+isAnswerRight = false
+ take()
+});
+
+$('.answer2').click(function() {
+  $('.question1').slideUp(2000)
+isAnswerRight = false
+ take()
+});
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 var player = 1
 function take () {
   if (player === 1){
     player = -1
-    cylinderCube ()
+if (isAnswerRight){
+  cylinderCube ()
+}
+
   }else{
-    cylinderCube2 ()
+
+if(isAnswerRight){
+ cylinderCube2 ()
+
+}
+
     player = 1
   }
+
 }
 
 
@@ -154,16 +294,24 @@ return distance*1000/UPDATES_PER_SECOND * DISTANCE_BET_BOX;
 
       var cylinderMove = 0
       var cylinderMovey = 0
-
+        //var Team1scene = 0
       function cylinderCube () {
+
+
+        //Team1scene = .01
+
+        //setTimeout(function(){
           cylinderMove =  1
           cylinderMovey =  1
 
         setTimeout(function () {
-
+            Team1scene = 0
             cylinderMove = 0
             cylinderMovey = 0
           }, durationOfMove(moveTooSpace))
+
+
+         //}, 1250)
 }
 
 
@@ -534,15 +682,16 @@ cubeTop2.rotation.y += .1
 
         cylinder2.position.x += cylinder2Move
         cylinder2.position.y += cylinder2Movey
+        //scene.rotation.y += Team1scene
 
 
-
+      //  scene.rotation.y += Team1scene
 
 
         //camera.position.z += 1
         //camera.position.x -= 1
         //scene.rotation.y += .01
-        scene.rotation.y -= .01
+        //scene.rotation.y -= .01
         //camera.rotation.y += .1
 
 
