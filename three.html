@@ -10,40 +10,196 @@
     </style>
   </head>
   <body>
-    <div>Hello World</div>
+
+
+<div class="outside-spinnper">
+  <div class="spinner">
+    <div id="cellBtn1" class="cell1">1</div>
+    <div id="cellBtn2" class="cell2">2</div>
+    <div id="cellBtn3" class="cell3">3</div>
+  </div>
+<div class="randow-spin-btn">
+<button id="Ran-Btn1" class="Ran-Btn" onclick="spinnerBtn()">Random Spin</button>
+</div>
+</div>
+
+<style>
+  .spinner{
+
+width: 1000px;
+height: 100px;
+border: 0px solid grey;
+
+}
+
+.cell,.cell1, .cell2, .cell3{
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+border-radius: 100%;
+width: 50px;
+height: 50px;
+border: 3px solid grey;
+font-size: 47px;
+}
+
+.outside-spinnper {
+  left: 77px;
+    background-color: gainsboro;
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    border: 3px solid grey;
+
+
+  }
+.randow-spin-btn{
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  border: 3px solid grey;
+      margin: auto;
+}
+.spinner{
+
+width: 1000px;
+height: 100px;
+border: 0px solid grey;
+
+}
+
+.chBtn{
+  margin: 20px;
+  text-align: center;
+  display: inline-block;
+border-radius: 100%;
+width: 50px;
+height: 50px;
+border: 3px solid #0052CF;
+color: white;
+background-color: blue;
+box-shadow: 0px 0px 35px 11px #0052CF;
+
+}
+
+
+.Ran-Btn{
+width:75px;
+height:75px;
+background-color:red;
+font-size: 15px;
+
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.js"></script>
     <script>
-
+var secMove;
 var moveTooSpace;
+var UPDATES_PER_SECOND = 60
+var DISTANCE_BET_BOX = 75
+
 function spinnerBtn() {
 var spinner = Math.random();
 
-  if(spinner <= 0.33 ){
+  if(spinner <= 0.53 ){
     moveTooSpace = 1
-    cylinderCube ()
-    cylinderCube2 ()
-  }else if(spinner <= 0.66 ){
+    secMove = 1200;
+    $('.cell1').addClass('chBtn');
+    console.log('spot 1');
+    take()
+  }else if(spinner <= 0.86 ){
     moveTooSpace = 2
-      cylinderCube ()
-      cylinderCube2 ()
+    secMove = 3200;
+    $('.cell2').addClass('chBtn')
+    console.log('spot 2');
+     take()
   }else{
     moveTooSpace = 3
-  cylinderCube ()
-  cylinderCube2 ()
-
+    secMove = 5200;
+    $('.cell3').addClass('chBtn')
+    console.log('spot 3');
+  take()
   }
   console.log(spinner);
+  setTimeout(function(){
+  prompt('question?') ;
+  setTimeout(function(){
+  $('.chBtn').removeClass('chBtn')
+}, 1000)
+}, secMove);
 }
 
 //<------------END of code------------------->
 
+var player = 1
+function take () {
+  if (player === 1){
+    player = -1
+    cylinderCube ()
+  }else{
+    cylinderCube2 ()
+    player = 1
+  }
+}
 
 
 
 
+function durationOfMove(distance){
+return distance*1000/UPDATES_PER_SECOND * DISTANCE_BET_BOX;
+}
+
+      var cylinderMove = 0
+      var cylinderMovey = 0
+
+      function cylinderCube () {
+          cylinderMove =  1
+          cylinderMovey =  1
+
+        setTimeout(function () {
+
+            cylinderMove = 0
+            cylinderMovey = 0
+          }, durationOfMove(moveTooSpace))
+}
 
 
 
+      var cylinder2Move = 0
+      var cylinder2Movey = 0
+
+      function cylinderCube2 () {
+          cylinder2Move =  -1
+          cylinder2Movey =  1
+
+        setTimeout(function () {
+
+            cylinder2Move = 0
+            cylinder2Movey = 0
+          }, durationOfMove(moveTooSpace))
+}
+
+var player = 1;
+
+function clickRandombtn() {
+  if (player == 1) {
+  player -= 1;
+
+  finishLine();
+  }else{
+  player += 1;
+
+  finishLine();
+  }
+}
+
+function finishLine(){
+
+
+}
 
 
 
@@ -54,9 +210,9 @@ var spinner = Math.random();
 
        // setup code
       var scene = new THREE.Scene();
-      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-      camera.position.z = 700
-      camera.position.y = 300
+      var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 3000 );
+      camera.position.z = 1100
+      camera.position.y = 200
       camera.position.x = 0
 
 
@@ -179,15 +335,6 @@ var spinner = Math.random();
       scene.add( cube9 );
 
 
- // draw a square
-      var geometry = new THREE.BoxGeometry( 50,50,50);
-      var material = new THREE.MeshNormalMaterial(  );
-      var cube10 = new THREE.Mesh( geometry, material );
-      cube10.rotation.z = 0.0174533
-      cube10.position.y = 675
-      cube10.position.x = -25
-
-      scene.add( cube10 );
 
 // draw a square
       var geometry = new THREE.BoxGeometry( 50,50,50);
@@ -293,15 +440,18 @@ var spinner = Math.random();
       scene.add( cube19 );
 
 
-      // draw a square
-      var geometry = new THREE.BoxGeometry( 50,50,50);
-      var material = new THREE.MeshNormalMaterial(  );
-      var cube20 = new THREE.Mesh( geometry, material );
-      cube20.rotation.z = 0.0174533
-      cube20.position.y = 675
-      cube20.position.x = 25
 
-      scene.add( cube20 );
+
+  // draw a FINISH square
+      var geometry = new THREE.BoxGeometry( 100,100,100);
+      var material = new THREE.MeshNormalMaterial(  );
+      var cubeFinish = new THREE.Mesh( geometry, material );
+      cubeFinish.rotation.z = 0.0174533
+      cubeFinish.position.y = 650
+      cubeFinish.position.x = 0
+
+      scene.add( cubeFinish );
+
 
 
 
@@ -317,7 +467,7 @@ var spinner = Math.random();
       scene.add( cubeTop );
 
 // draw a sphere
-      var geometry = new THREE.SphereGeometry( 100, 5, 32,0, 4.9 );
+      var geometry = new THREE.SphereGeometry( 100, 5, 32 );
       var material = new THREE.MeshNormalMaterial(  );
       var sphere = new THREE.Mesh( geometry, material );
 
@@ -338,74 +488,6 @@ scene.add( sphere );
       scene.add( cubeTop2 );
 
 
-      cylinderMove = 0
-      cylinderMovey = 0
-
-      function cylinderCube () {
-          cylinderMove =  1
-          cylinderMovey =  1
-
-
-
-         if (moveTooSpace === 1){
-          setTimeout(function () {
-            cylinderMove = 0
-            cylinderMovey = 0
-          }, 1000)
-          }
-
-          else if(moveTooSpace === 2){
-          setTimeout(function () {
-            cylinderMove = 0
-            cylinderMovey = 0
-          }, 3000)
-          }
-          else if(moveTooSpace === 3){
-        setTimeout(function () {
-
-            cylinderMove = 0
-            cylinderMovey = 0
-          }, 5000)
-}
-
-
-}
-
-
-      cylinder2Move = 0
-      cylinder2Movey = 0
-
-      function cylinderCube2 () {
-          cylinder2Move =  -1
-          cylinder2Movey =  1
-
-
-
-         if (moveTooSpace === 1){
-          setTimeout(function () {
-            cylinder2Move = 0
-            cylinder2Movey = 0
-          }, 1000)
-          }
-
-          else if(moveTooSpace === 2){
-          setTimeout(function () {
-            cylinder2Move = 0
-            cylinder2Movey = 0
-          }, 3000)
-          }
-          else if(moveTooSpace === 3){
-        setTimeout(function () {
-
-            cylinder2Move = 0
-            cylinder2Movey = 0
-          }, 5000)
-}
-
-
-}
-
-
 
 
 
@@ -422,7 +504,7 @@ scene.add( sphere );
         // cube7.rotation.x += .01
         // cube8.rotation.x += .01
         // cube9.rotation.x += .01
-        // cube10.rotation.x += .01
+
         //  cube11.rotation.x += .01
         //  cube12.rotation.x += .01
         //  cube13.rotation.x += .01
@@ -432,9 +514,9 @@ scene.add( sphere );
         //  cube17.rotation.x += .01
         //  cube18.rotation.x += .01
         //  cube19.rotation.x += .01
-        //     cube20.rotation.x += .01
 
-
+cubeFinish.rotation.y += .1
+cubeFinish.rotation.z += .1
 
 cubeTop.rotation.x -= .1
 cubeTop.rotation.y -= .1
@@ -460,7 +542,7 @@ cubeTop2.rotation.y += .1
         //camera.position.z += 1
         //camera.position.x -= 1
         //scene.rotation.y += .01
-        //scene.rotation.y -= .01
+        scene.rotation.y -= .01
         //camera.rotation.y += .1
 
 
