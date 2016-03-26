@@ -453,7 +453,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 56px;
     left: 581px;
 }
 
@@ -467,7 +467,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 53px;
     left: 581px;
 }
 
@@ -494,7 +494,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 63px;
     left: 581px;
 }
 
@@ -507,7 +507,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 31px;
     left: 581px;
 }
 .question7{
@@ -519,7 +519,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 54px;
     left: 581px;
 }
 .question8 {
@@ -543,7 +543,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 60px;
     left: 581px;
 }
 .question10 {
@@ -555,7 +555,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 60px;
     left: 581px;
 }
 .question11 {
@@ -567,16 +567,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
-    left: 581px; top: 0px;
-    position: absolute;
-    width: 1000px;
-    height: 159px;
-    border: 1px solid black;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 39px;
+    font-size: 67px;
     left: 581px;
 }
 .question12 {
@@ -588,7 +579,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 60px;
     left: 581px;
 }
 .question13 {
@@ -612,7 +603,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 52px;
     left: 581px;
 }
 .question15 {
@@ -624,7 +615,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 51px;
     left: 581px;
 }
 .question16 {
@@ -660,7 +651,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 53px;
     left: 581px;
 }
 .question19 {
@@ -672,7 +663,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 51px;
     left: 581px;
 }
 .question20 {
@@ -684,7 +675,7 @@ position: relative;
     background-color: teal;
     padding: 12px;
     text-align: center;
-    font-size: 39px;
+    font-size: 31px;
     left: 581px;
 }
 .question21 {
@@ -712,7 +703,222 @@ position: relative;
     left: 581px;
 }
 
-
+.question23 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 57px;
+    left: 581px;
+}
+.question24 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question25 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question26 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question27 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 38px;
+    left: 581px;
+}
+.question28 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 61px;
+    left: 581px;
+}
+.question29 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 35px;
+    left: 581px;
+}
+.question30 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question31 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 51px;
+    left: 581px;
+}
+.question32 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question33 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question34 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 50px;
+    left: 581px;
+}
+.question35 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question36 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question37 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question38 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question39 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
+.question40 {
+     top: 0px;
+    position: absolute;
+    width: 1000px;
+    height: 159px;
+    border: 1px solid black;
+    background-color: teal;
+    padding: 12px;
+    text-align: center;
+    font-size: 39px;
+    left: 581px;
+}
 
 .right {
     top: 0px;
