@@ -1,800 +1,121 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset=utf-8>
-    <title>My first Three.js app</title>
-    <style>
-      body { margin: 0; }
-      canvas { width: 100%; height: 100% , z-index: -1;}
-      div { position: static; color: white; }
-    </style>
-  </head>
-  <body>
+$('.nextToGame').click(function() {
+  console.log(player1TeamName , player2TeamName)
+  $('.iconPickerMain').fadeOut(5000)
+});
 
+//This is the start of the Game srceen it
+//will say Lets play and slide the option too
+//to play on the screen
+$('.letsPlay').slideUp(0)
+$('.letsPlay').slideDown(4000)
+  $('.startBtn').slideUp(2000)
+  $('.startBtn').fadeIn(4000)
 
-<div class="outside-spinnper">
-  <div class="spinner">
-    <div id="cellBtn1" class="cell1">1</div>
-    <div id="cellBtn2" class="cell2">2</div>
-    <div id="cellBtn3" class="cell3">3</div>
-  </div>
-<div class="randow-spin-btn">
-<button id="Ran-Btn1" class="Ran-Btn" onclick="spinnerBtn()">Random Spin</button>
-</div>
-</div>
+//
+$('.startBtn').click(function() {
+  $('.letsPlayMain').fadeOut(3000)
+    $('.iconHolder').slideUp(0)
+  $('.iconHolder').slideDown(4000)
+  });
+//<------------END of code------------------->
 
-
-  <div class="winner">YOU ARE THE WINNER!!!
-  </div>
-
-  <div class="right">RIGHT
-  </div>
-
-  <div class="wrong">WRONG
-
-  </div>
-<div id="questions">
-<!-- 1 box of a question-->
-<div class="question1">How many astronauts have walked on the Moon?
-<button class="answer1">A. 12</button>
-<button class="answer2">B. 7</button>
-<button class="answer3">C. 9</button>
-
-
-</div>
-<!--END OF CODE-->
-
-
-<!-- 2 box of a question-->
-<div class="question2">what year was the internet invented?
-<button class="answer1">A. 1969</button>
-<button class="answer2">B. 1963</button>
-<button class="answer3">C. 1960</button>
-
-
-</div>
-<!--END OF CODE-->
-
-
-
-<!-- 3 box of a question-->
-<div class="question3">what year was the world wide web invented?
-<button class="answer1">A. 1987</button>
-<button class="answer2">B. 1989</button>
-<button class="answer3">C. 1984</button>
-
-
-</div>
-<!--END OF CODE-->
-
-<!-- 4 box of a question-->
-<div class="question4">How many U.S. states border the Gulf of Mexico?
-<button class="answer1">A. Five</button>
-<button class="answer2">B. three</button>
-<button class="answer3">C. nine</button>
-
-
-</div>
-<!--END OF CODE-->
-
-
-<!-- 5 box of a question-->
-<div class="question5">What is the diameter of Earth?
-
-<button class="answer1">A. 9,000 miles</button>
-<button class="answer2">B. 8,000 miles</button>
-<button class="answer3">C. 10,000 miles</button>
-
-
-</div>
-<!--END OF CODE-->
-
-<!-- 6 box of a question-->
-<div class="question6"> What colour jersey is worn by the winners of each stage of the Tour De France?
-<button class="answer1">A. White </button>
-<button class="answer2">B. Blue  </button>
-<button class="answer3">C. Yellow</button>
-</div>
-<!--END OF CODE-->
-<!-- 7 box of a question-->
-<div class="question7">Which chess piece can only move diagonally?
-<button class="answer1">A. A Queen</button>
-<button class="answer2">B. A Bishop</button>
-<button class="answer3">C. A Rooks</button>
-</div>
-<!--END OF CODE-->
-<!-- 8 box of a question-->
-<div class="question8">Name the three primary colours?
-<button class="answer1">A. Red, green and blue.</button>
-<button class="answer2">B. Red, yellow and blue </button>
-<button class="answer3">C. Red, Green and yellow.</button>
-</div>
-<!--END OF CODE-->
-<!-- 9 box of a question-->
-<div class="question9">What does the term 'piano' mean?
-<button class="answer1">A. 'To to feel the music'</button>
-<button class="answer2">B. 'To use both hands'</button>
-<button class="answer3">C. 'To be played softly' </button>
-</div>
-<!--END OF CODE-->
-<!-- 10 box of a question-->
-<div class="question10">When was William Shakespeare born?
-<button class="answer1">A. 23rd April 1564 </button>
-<button class="answer2">B. 12rd March 1564.</button>
-<button class="answer3">C. 2rd March 1564.</button>
-</div>
-<!--END OF CODE-->
-<!-- 11 box of a question-->
-<div class="question11">When did the Cold War end?
-<button class="answer1">A. 1982</button>
-<button class="answer2">B. 1989 </button>
-<button class="answer3">C. 1990</button>
-</div>
-<!--END OF CODE-->
-<!-- 12 box of a question-->
-<div class="question12">How long is a memory goldfish?
-<button class="answer1">A. three seconds</button>
-<button class="answer2">B. 4 days</button>
-<button class="answer3">C. 5 months </button>
-</div>
-<!--END OF CODE-->
-<!-- 13 box of a question-->
-<div class="question13">How old is the world's oldest piece of chewing gum?
-<button class="answer1">A. 70 years old</button>
-<button class="answer2">B. 9000 years old </button>
-<button class="answer3">C. 15,000 years old</button>
-</div>
-<!--END OF CODE-->
-<!-- 14 box of a question-->
-<div class="question14">How many pieces of wood is a violin made up?
-<button class="answer1">A. 70 </button>
-<button class="answer2">B. 92</button>
-<button class="answer3">C. 127</button>
-</div>
-<!--END OF CODE-->
-<!-- 15 box of a question-->
-<div class="question15">Where was the fortune cookie actually invented?
-<button class="answer1">A. America </button>
-<button class="answer2">B. Japan</button>
-<button class="answer3">C. China</button>
-</div>
-<!--END OF CODE-->
-<!-- 16 box of a question-->
-<div class="question16">Which animal is known to kill more people than plane crashes?
-
-
-<button class="answer1">A. Sharks</button>
-<button class="answer2">B. Donkeys </button>
-<button class="answer3">C. Bears</button>
-</div>
-<!--END OF CODE-->
-<!-- 17 box of a question-->
-<div class="question17">The Empire State Building is composed of how many bricks?
-<button class="answer1">A. 10 million </button>
-<button class="answer2">B. 20 million </button>
-<button class="answer3">C. 30 million </button>
-</div>
-<!--END OF CODE-->
-<!-- 18 box of a question-->
-<div class="question18">How long is a kangaroo baby, when it is born?
-<button class="answer1">A. 1/2 inch</button>
-<button class="answer2">B. 1 inch </button>
-<button class="answer3">C. 4 inch</button>
-</div>
-<!--END OF CODE-->
-<!-- 19 box of a question-->
-<div class="question19">What is the dot over the letter "i" and "j" called?
-<button class="answer1">A. A mark</button>
-<button class="answer2">B. A dot</button>
-<button class="answer3">C. A tittle </button>
-</div>
-<!--END OF CODE-->
-<!-- 20 box of a question-->
-<div class="question20">How much time, on an average, does a person spend on kissing, in his lifetime?
-<button class="answer1">A. 20,160 minutes </button>
-<button class="answer2">B. 1,345,160 minutes</button>
-<button class="answer3">C. 20,889,160 minutes</button>
-</div>
-<!--END OF CODE-->
-<!-- 21 box of a question-->
-<div class="question21">How much time, on an average, does a person spend in the toilet in his lifetime?
-(NOT people with bladder issues.)
-<button class="answer1">A. 1 year </button>
-<button class="answer2">B. 3 years </button>
-<button class="answer3">C. 4 years</button>
-</div>
-<!--END OF CODE-->
-<!-- 22 box of a question-->
-<div class="question22">What was the carburetor of the first Harley-Davidson, built in the 1903, made of?
-<button class="answer1">A. A metal cup</button>
-<button class="answer2">B. A soda tin can</button>
-<button class="answer3">C. A tomato can </button>
-</div>
-<!--END OF CODE-->
-<!-- 23 box of a question-->
-<div class="question23">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 24 box of a question-->
-<div class="question24">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 25 box of a question-->
-<div class="question25">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 26 box of a question-->
-<div class="question26">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 27 box of a question-->
-<div class="question27">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 28 box of a question-->
-<div class="question28">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 29 box of a question-->
-<div class="question29">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 30 box of a question-->
-<div class="question30">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 31 box of a question-->
-<div class="question31">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 32 box of a question-->
-<div class="question32">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 33 box of a question-->
-<div class="question33">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 34 box of a question-->
-<div class="question34">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 35 box of a question-->
-<div class="question35">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 36 box of a question-->
-<div class="question36">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 37 box of a question-->
-<div class="question37">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 38 box of a question-->
-<div class="question38">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 39 box of a question-->
-<div class="question39">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-<!-- 40 box of a question-->
-<div class="question40">
-<button class="answer1">A. </button>
-<button class="answer2">B. </button>
-<button class="answer3">C. </button>
-</div>
-<!--END OF CODE-->
-
-
-</div>
-
-<style>
-
-
-.winner{
-  position: absolute;
-width: 100%;
-height: 100%;
-background-color: yellow;
-color: black;
-font-size: 250px;
-
-
+//This will Zoom the Icon picture, when the play click the
+//icon they want.
+$('.zoomIcon1').hide(0)
+$('.zoomIcon2').hide(0)
+$('.zoomIcon3').hide(0)
+$('.zoomIcon4').hide(0)
+var teamsel = "player1";
+var player1TeamName;
+var player2TeamName;
+var IconZOO;
+var IconZOO2;
+$('.fristIcon').click(function() {
+  if(teamsel == "player1"){
+    player1TeamName = "Pink Dolphin";
+    IconZOO = 'zoomIcon1Finish'
+    teamsel = "player2"
+  }else if(teamsel == "player2"){
+    player2TeamName = "Pink Dolphin"
+    IconZOO2 = 'zoomIcon1Finish'
+    teamsel = null
   }
-  .spinner{
+  console.log(player1TeamName , player2TeamName);
+  $('.fristIcon').addClass('clickIcon')
+  $('.zoomIcon1').toggle(1000)
+    $('.zoomIcon1').toggle(2000)
+  $('.clickIcon').click(function(){
+ $('.fristIcon').removeClass('clickIcon')
+  })
+});
 
-width: 1000px;
-height: 100px;
-border: 0px solid grey;
-
-}
-
-.cell,.cell1, .cell2, .cell3{
-  margin: 20px;
-  text-align: center;
-  display: inline-block;
-border-radius: 100%;
-width: 50px;
-height: 50px;
-border: 3px solid grey;
-font-size: 47px;
-}
-
-.outside-spinnper {
-  left: 77px;
-    background-color: gainsboro;
-    display: inline-block;
-    width: 300px;
-    height: 200px;
-    border: 3px solid grey;
-
-
+$('.secondIcon').click(function() {
+   if(teamsel == "player1"){
+    player1TeamName = "Mr. Meme";
+    IconZOO = 'zoomIcon2Finish'
+    teamsel = "player2"
+  }else if(teamsel == "player2"){
+    player2TeamName = "Mr. Meme"
+     IconZOO2 = 'zoomIcon2Finish'
+    teamsel = null
   }
-.randow-spin-btn{
-  text-align: center;
-  width: 75px;
-  height: 75px;
-  border: 3px solid grey;
-      margin: auto;
-}
+  $('.secondIcon').addClass('clickIcon')
+  $('.zoomIcon2').toggle(1000)
+    $('.zoomIcon2').toggle(2000)
+  $('.clickIcon').click(function(){
+ $('.secondIcon').removeClass('clickIcon')
+  })
+});
 
+$('.Icon3').click(function() {
+   if(teamsel == "player1"){
+    player1TeamName = "Shia Labeouf";
+     IconZOO = 'zoomIcon3Finish'
+    teamsel = "player2"
+  }else if(teamsel == "player2"){
+    player2TeamName = "Shia Labeouf"
+     IconZOO2 = 'zoomIcon3Finish'
+    teamsel = null
+  }
+  $('.Icon3').addClass('clickIcon')
+  $('.zoomIcon3').toggle(1000)
+    $('.zoomIcon3').toggle(3000)
+  $('.clickIcon').click(function(){
+ $('.Icon3').removeClass('clickIcon')
+  })
+});
 
-.chBtn{
-  margin: 20px;
-  text-align: center;
-  display: inline-block;
-border-radius: 100%;
-width: 50px;
-height: 50px;
-border: 3px solid #0052CF;
-color: white;
-background-color: blue;
-box-shadow: 0px 0px 35px 11px #0052CF;
+$('.Icon4').click(function() {
+  if(teamsel == "player1"){
+    player1TeamName = "Spongebob";
+     IconZOO = 'zoomIcon4Finish'
+    teamsel = "player2"
+  }else if(teamsel == "player2"){
+    player2TeamName = "Spongebob"
+     IconZOO2 = 'zoomIcon4Finish'
+    teamsel = null
+  }
+  $('.Icon4').addClass('clickIcon')
+  $('.zoomIcon4').toggle(1000)
+    $('.zoomIcon4').fadeOut(3000)
+  $('.clickIcon').click(function(){
+ $('.Icon4').removeClass('clickIcon')
+  })
+});
+//<------------END of code------------------->
 
-}
-
-
-.Ran-Btn{
-width:75px;
-height:75px;
-background-color:red;
-font-size: 15px;
-
-}
-
-
-
-.question1 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-
-.answer1 {
-    font-size: 18px;
-    display: inline-block;
-    margin: 7px;
-    width: 156px;
-    height: 58px;
-    border: 1px solid blue;
-}
-
-.answer2 {
-    font-size: 18px;
-    display: inline-block;
-    margin: 7px;
-    width: 156px;
-    height: 58px;
-    border: 1px solid blue;
-}
-
-.answer3 {
-    font-size: 18px;
-    display: inline-block;
-    margin: 7px;
-    width: 156px;
-    height: 58px;
-    border: 1px solid blue;
-}
-
-.question2 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-
-
-.question3 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-
-
-.question4 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-
-.question5 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-
-.question6{
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question7{
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question8 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question9 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question10 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question11 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question12 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question13 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question14 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question15 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question16 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question17 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question18 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question19 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question20 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question21 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-.question22 {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: teal;
-    padding: 12px;
-    text-align: center;
-    font-size: 24px;
-    left: 624px;
-}
-
-
-
-.right {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: green;
-    padding: 12px;
-    text-align: center;
-    font-size: 100px;
-    left: 624px;
-}
-
-.wrong {
-    position: absolute;
-    width: 382px;
-    height: 159px;
-    border: 1px solid black;
-    top: 509px;
-    background-color: red;
-    padding: 12px;
-    text-align: center;
-    font-size: 100px;
-    left: 624px;
-}
-
-
-
-
-</style>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.js"></script>
-    <script>
-$('.winner').hide(0)
+$('.pointerF').hide(0)
+$('.Team1Display').hide(0)
+$('.Team2Display').hide(0)
+$('.Team1winner').hide(0)
+$('.Team2winner').hide(0)
 $('.right').hide(0)
 $('.wrong').hide(0)
-$('.question1').hide(0)
-$('.question2').hide(0)
-$('.question3').hide(0)
-$('.question4').hide(0)
-$('.question5').hide(0)
-$('.question6').hide(0)
-$('.question7').hide(0)
-$('.question8').hide(0)
-$('.question9').hide(0)
-$('.question10').hide(0)
-$('.question11').hide(0)
-$('.question12').hide(0)
-$('.question13').hide(0)
-$('.question14').hide(0)
-$('.question15').hide(0)
-$('.question16').hide(0)
-$('.question17').hide(0)
-$('.question18').hide(0)
-$('.question19').hide(0)
-$('.question20').hide(0)
-$('.question21').hide(0)
-$('.question22').hide(0)
-$('.question23').hide(0)
-$('.question24').hide(0)
-$('.question25').hide(0)
-$('.question26').hide(0)
-$('.question27').hide(0)
-$('.question28').hide(0)
-$('.question29').hide(0)
-$('.question30').hide(0)
-$('.question31').hide(0)
-$('.question32').hide(0)
-$('.question33').hide(0)
-$('.question34').hide(0)
-$('.question35').hide(0)
-$('.question36').hide(0)
-$('.question37').hide(0)
-$('.question38').hide(0)
-$('.question39').hide(0)
-$('.question40').hide(0)
+
+for(i = 0 ; i <= 40; i++){
+
+  $('.question' + [i]).hide(0)
+}
 
 
 
@@ -1442,150 +763,586 @@ isAnswerRight = true
 });
 
 //<------------END of code------------------->
+//<----------23 QUESTIONS--------------------->
+
+$('.question23 .answer1').click(function() {
+  $('.question23').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question23 .answer2').click(function() {
+  $('.question23').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question23 .answer3').click(function() {
+  $('.question25').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+//<------------END of code------------------->
+
+//<----------24 QUESTIONS--------------------->
+
+$('.question24 .answer1').click(function() {
+  $('.question24').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question24 .answer2').click(function() {
+  $('.question24').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question24 .answer3').click(function() {
+  $('.question24').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
 
 
+//<------------END of code------------------->
+
+//<----------25 QUESTIONS--------------------->
+
+$('.question25 .answer1').click(function() {
+  $('.question25').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question25 .answer2').click(function() {
+  $('.question25').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question25 .answer3').click(function() {
+  $('.question25').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+//<------------END of code------------------->
+
+//<----------26 QUESTIONS--------------------->
+
+$('.question26 .answer1').click(function() {
+  $('.question26').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question26 .answer2').click(function() {
+  $('.question26').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question26 .answer3').click(function() {
+  $('.question26').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+//<------------END of code------------------->
+
+//<----------27 QUESTIONS--------------------->
+
+$('.question27 .answer1').click(function() {
+  $('.question27').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question27 .answer2').click(function() {
+  $('.question27').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question27 .answer3').click(function() {
+  $('.question27').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+//<------------END of code------------------->
+
+//<----------28 QUESTIONS--------------------->
+
+$('.question28 .answer1').click(function() {
+  $('.question28').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question28 .answer2').click(function() {
+  $('.question28').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question28 .answer3').click(function() {
+  $('.question28').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
 
 
+//<------------END of code------------------->
 
+//<----------29 QUESTIONS--------------------->
 
+$('.question29 .answer1').click(function() {
+  $('.question29').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
 
+$('.question29 .answer2').click(function() {
+  $('.question29').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
 
+$('.question29 .answer3').click(function() {
+  $('.question29').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
 
+//<------------END of code------------------->
 
+//<----------30 QUESTIONS--------------------->
 
+$('.question30 .answer1').click(function() {
+  $('.question30').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
 
+$('.question30 .answer2').click(function() {
+  $('.question30').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
 
+$('.question30 .answer3').click(function() {
+  $('.question30').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
 
+//<------------END of code------------------->
 
+//<----------31 QUESTIONS--------------------->
 
+$('.question31 .answer1').click(function() {
+  $('.question31').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question31 .answer2').click(function() {
+  $('.question31').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question31 .answer3').click(function() {
+  $('.question31').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+//<------------END of code------------------->
+
+//<----------32 QUESTIONS--------------------->
+$('.question32 .answer1').click(function() {
+  $('.question32').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question32 .answer2').click(function() {
+  $('.question32').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question32 .answer3').click(function() {
+  $('.question32').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+//<------------END of code------------------->
+
+//<----------33 QUESTIONS--------------------->
+
+$('.question33 .answer1').click(function() {
+  $('.question33').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question33 .answer2').click(function() {
+  $('.question33').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question33 .answer3').click(function() {
+  $('.question33').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+//<------------END of code------------------->
+
+//<----------34 QUESTIONS--------------------->
+
+$('.question34 .answer1').click(function() {
+  $('.question34').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question34 .answer2').click(function() {
+  $('.question34').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question34 .answer3').click(function() {
+  $('.question34').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+//<------------END of code------------------->
+
+//<----------35 QUESTIONS--------------------->
+
+$('.question35 .answer1').click(function() {
+  $('.question35').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question35 .answer2').click(function() {
+  $('.question35').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question35 .answer3').click(function() {
+  $('.question35').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+//<------------END of code------------------->
+
+//<----------36 QUESTIONS--------------------->
+
+$('.question36 .answer1').click(function() {
+  $('.question36').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question36 .answer2').click(function() {
+  $('.question36').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question36 .answer3').click(function() {
+  $('.question36').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+//<------------END of code------------------->
+
+//<----------37 QUESTIONS--------------------->
+
+$('.question37 .answer1').click(function() {
+  $('.question37').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question37 .answer2').click(function() {
+  $('.question37').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question37 .answer3').click(function() {
+  $('.question37').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+//<------------END of code------------------->
+
+//<----------38 QUESTIONS--------------------->
+
+$('.question38 .answer1').click(function() {
+  $('.question38').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question38 .answer2').click(function() {
+  $('.question38').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question38 .answer3').click(function() {
+  $('.question38').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+//<------------END of code------------------->
+
+//<----------39 QUESTIONS--------------------->
+
+$('.question39 .answer1').click(function() {
+  $('.question39').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+$('.question39 .answer2').click(function() {
+  $('.question39').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question39 .answer3').click(function() {
+  $('.question39').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+//<------------END of code------------------->
+
+//<----------40 QUESTIONS--------------------->
+
+$('.question40 .answer1').click(function() {
+  $('.question40').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question40 .answer2').click(function() {
+  $('.question40').slideUp(2000)
+  $('.wrong').fadeIn(0)
+  $('.wrong').fadeOut(5000)
+  isAnswerRight = false
+  take()
+});
+
+$('.question40 .answer3').click(function() {
+  $('.question40').slideUp(2000)
+  $('.right').fadeIn(0)
+  $('.right').fadeOut(5000)
+  isAnswerRight = true
+});
+
+//<------------END of code------------------->
 
 //This will pick a random quetion from 1-40
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 function questionPOP(){
-var randomQuestion = getRandomInt(1, 23)
+var randomQuestion = getRandomInt(1, 41)
   $('.question' + randomQuestion ).slideDown(2000)
 }
 //END OF CODE
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var team1 = 0
 var team2 = 0
-
-
-
 var player = 1
 function take () {
   userName = "team 1"
   if (player === 1){
-          player = -1
-
+        player = -1
+        switchPlayers()
         console.log("player 1 outside")
-        if (isAnswerRight){
-          team1 += moveTooSpace
-          console.log(team1)
-          if (team1 >= 10){
-            alert("you won")
-              $('.winner').fadeIn(0)
-              $('#questions').hide()
-          }
+    if (isAnswerRight){
+      team1 += moveTooSpace
+       console.log(team1)
+      if (team1 >= 10){
+        console.log(player2TeamName, player1TeamName);
+        $('.Team1winner').html(player1TeamName+ " YOU ARE THE WINNER").addClass(IconZOO)
+        $('.Team1winner').fadeIn(0)
+        $('#questions').hide()
+       }
        console.log("player 1 inside right answer")
-
-        cylinderCube ()
-        }
-
-  }else{
-         userName = "team 2"
-          player = 1
-         console.log("player 2 outside")
-        if(isAnswerRight){
-          team2 += moveTooSpace
-          if (team2 >= 10){
-            $('#questions').hide()
-            alert("you won")
-              $('.winner').fadeIn(0)
-          }
+      cylinderCube ()
+    }
+  }
+else{
+     userName = "team 2"
+      player = 1
+      switchPlayers()
+      console.log("player 2 outside")
+    if(isAnswerRight){
+      team2 += moveTooSpace
+      if (team2 >= 10){
+          $('#questions').hide()
+          console.log(player2TeamName, player1TeamName);
+          $('.Team2winner').html(player2TeamName + " YOU ARE THE WINNER" ).addClass(IconZOO2)
+          $('.Team2winner').fadeIn(0)
+     }
          console.log("player 2 inside right answer")
           cylinderCube2 ()
+   }
+ }
+}
 
-          }
-
-     }
-
+function switchPlayers(){
+  if(player === 1){
+    $('.pointerF').fadeIn(0)
+    $('.Team1Display').fadeIn(500)
+    $('.Team2Display').hide(0)
+  }else{
+    $('.pointerF').fadeIn(0)
+    $('.Team2Display').fadeIn(500)
+    $('.Team1Display').hide(0)
   }
-
-
-
+}
+switchPlayers()
 
 function durationOfMove(distance){
 return distance*1000/UPDATES_PER_SECOND * DISTANCE_BET_BOX;
 }
-
       var cylinderMove = 0
       var cylinderMovey = 0
         //var Team1scene = 0
-      function cylinderCube () {
-
-
-        //Team1scene = .01
-
-        //setTimeout(function(){
-          cylinderMove =  1
-          cylinderMovey =  1
-
-        setTimeout(function () {
-            Team1scene = 0
-            cylinderMove = 0
-            cylinderMovey = 0
-          }, durationOfMove(moveTooSpace))
-
-
-         //}, 1250)
+function cylinderCube () {
+  cylinderMove =  1
+  cylinderMovey =  1
+  setTimeout(function () {
+    Team1scene = 0
+    cylinderMove = 0
+    cylinderMovey = 0
+  }, durationOfMove(moveTooSpace))
 }
-
-
-
-      var cylinder2Move = 0
-      var cylinder2Movey = 0
-
-      function cylinderCube2 () {
-          cylinder2Move =  -1
-          cylinder2Movey =  1
-
-        setTimeout(function () {
-
-            cylinder2Move = 0
-            cylinder2Movey = 0
-          }, durationOfMove(moveTooSpace))
+var cylinder2Move = 0
+var cylinder2Movey = 0
+function cylinderCube2 () {
+  cylinder2Move =  -1
+  cylinder2Movey =  1
+  setTimeout(function () {
+    cylinder2Move = 0
+    cylinder2Movey = 0
+  }, durationOfMove(moveTooSpace))
 }
-
 var player = 1;
-
 function clickRandombtn() {
   if (player == 1) {
   player -= 1;
-
   finishLine();
   }else{
   player += 1;
-
   finishLine();
   }
 }
@@ -1613,7 +1370,7 @@ function clickRandombtn() {
 
       // drawing the cylinder
       var geometry = new THREE.CylinderGeometry( 0, 10, 50, 32 );
-      var material = new THREE.MeshNormalMaterial( );
+      var material = new THREE.MeshBasicMaterial({color: "#ce2121"});
       var cylinder = new THREE.Mesh( geometry, material );
       cylinder.rotation.z = 3.14159
       cylinder.position.y = 0
@@ -1622,7 +1379,7 @@ function clickRandombtn() {
 
        // drawing the cylinder2
       var geometry = new THREE.CylinderGeometry( 0, 10, 50, 32 );
-      var material = new THREE.MeshNormalMaterial( );
+      var material = new THREE.MeshBasicMaterial({color: "#0726b9"});
       var cylinder2 = new THREE.Mesh( geometry, material );
       cylinder2.rotation.z = 3.14159
       cylinder2.position.y = 0
@@ -1843,9 +1600,6 @@ function clickRandombtn() {
       scene.add( cubeFinish );
 
 
-
-
-
    // draw a center square
       var geometry = new THREE.BoxGeometry( 50,200,50);
       var material = new THREE.MeshNormalMaterial(  );
@@ -1877,11 +1631,7 @@ scene.add( sphere );
 
       scene.add( cubeTop2 );
 
-
-
-
-
-      function render() {
+function render() {
         requestAnimationFrame( render );
         renderer.render( scene, camera );
         cylinder.rotation.x += 0
@@ -1894,7 +1644,6 @@ scene.add( sphere );
         // cube7.rotation.x += .01
         // cube8.rotation.x += .01
         // cube9.rotation.x += .01
-
         //  cube11.rotation.x += .01
         //  cube12.rotation.x += .01
         //  cube13.rotation.x += .01
@@ -1905,42 +1654,31 @@ scene.add( sphere );
         //  cube18.rotation.x += .01
         //  cube19.rotation.x += .01
 
-cubeFinish.rotation.y += .1
-cubeFinish.rotation.z += .1
+        cubeFinish.rotation.y += .1
+        cubeFinish.rotation.z += .1
 
-cubeTop.rotation.x -= .1
-cubeTop.rotation.y -= .1
-cubeTop.rotation.z -= .1
+        cubeTop.rotation.x -= .1
+        cubeTop.rotation.y -= .1
+        cubeTop.rotation.z -= .1
 
+          sphere.rotation.y += .1
 
-sphere.rotation.y += .1
-
-cubeTop2.rotation.x += .1
-cubeTop2.rotation.y += .1
+          cubeTop2.rotation.x += .1
+          cubeTop2.rotation.y += .1
 
         cylinder.position.x += cylinderMove
         cylinder.position.y += cylinderMovey
-
 
         cylinder2.position.x += cylinder2Move
         cylinder2.position.y += cylinder2Movey
         //scene.rotation.y += Team1scene
 
-
       //  scene.rotation.y += Team1scene
-
 
         //camera.position.z += 1
         //camera.position.x -= 1
-        //scene.rotation.y += .01
+        scene.rotation.y += .001
         //scene.rotation.y -= .01
         //camera.rotation.y += .1
-
-
       }
-
-
       render();
-    </script>
-  </body>
-</html>
